@@ -1,0 +1,113 @@
+Teoria dos números
+
+O que é?
+- estudo dos inteiros inteiros
+
+Algorítmos:
+- Euclides
+- EUclides estendido
+- Resolução de equações lineares modulares
+
+Material:
+- Algoritmos, Teoria e Prática
+
+Entrada e custo
+- números grandes
+    - ex:
+        ordenação: [11,5,21,5,8,10]
+        euclides: 1234567891012345 142562623623
+- operações em bits
+
+Divisibilidade
+- d|a
+- a = kd 
+- divisores triviais
+- fatores
+- Primo
+
+Teorma a da divisão
+- a = q*n + r
+- Quociente (q) = chão(a/n)
+- Resto (r) = a % n 
+obs: % é o operador de módulo
+
+Equivalência modular
+- Uma classe definida em função de um número A e um divisor N
+- para todo K pertencente a classe, K % N = A % N
+
+Divisor comum
+- d|a e d|b, então d é divisor comum entre a e b
+- 8 e 12
+    8: 1,2,4,8
+    12: 1,2,3,4,6,12
+    divisores: 1,2,4
+- d|(a+b)
+- d|(a-b)
+- d|(ax + by)
+
+Máximo Divisor comum
+- Maior divisor
+- 6 e 15
+    6: 1,2,3,6
+    15: 1,3,5,15
+- está entre: 1 e min(a, b)
+
+Propriedades MDC
+- MDC(a,b) = MDC(b,a)
+- MDC(-a,b) = MDC(a,b)
+- MDC(a,b) = MDC(|a|,|b|)
+- MDC(a,0) = |a|
+- MDC(a, ka) = |a|
+- d|a e d|b, d|MDC(a,b)
+- 1,2,4, MDC = 4
+
+Primos entre si
+- MDC(a,b) = 1
+- 8, 15
+
+Fatoração única
+- Todo número pode ser escrito como uma fatoração de Primos
+- p1^e1 * p2^e2 * p3^e3 ...
+- Ex: 28
+- Primos: 2,3,5,7,11,13,..
+- 2^2 * 3^0 * 5^0 * 7^1 = 4* 1* 1* 7 = 28
+
+MDC através de fatoração úncia:
+- 6: 2^1 * 3^1 * 5^0
+- 15: 2^0 * 3^1 * 5^1
+- MDC = 2^0 * 3^1 * 5^0 = 1*3*1 = 3
+
+Propriedade recursiva:
+- MDC(a,b) = MDC(b, a % b)
+
+Custo Euclides e estendido:
+- O(lg b)
+- O(n) operações aritméticas
+- O(n^2) operações em bits
+- Custo adicional do estendido para divisão
+
+Aritmetica modular
+- a + b = (a + b) % n
+
+Grupos:
+- (S, +), onde S é um conjunto e + é uma operação binária
+- Fechamento: a pertence a S e b pertence a S, a + b pertence a S
+- Identidade: existe um elemento e, tal que e + a = a + e = a
+- Associatividade: (a + b) + c = a + (b + c)
+- inverso: para a, existe b, tal que a + b = b + a = e
+
+- comutativa: a +  b = b + a
+
+Subgrupos:
+- S' contido em S, e existem os grupos g1 = (S, +) e g2 = (S', +), g2 é Subgrupo de g1
+- se S' for diferente de S, então g2 é chamadado de subgrupo próprio
+
+Subgrupos gerados por um elemento:
+- escolhemos um elemento do conjunto S e aplicamos a operação + nele, k vezes
+- exemplo g1 = (Z, +), n = 6
+- podemos pegar o elemento 2 e aplicar a operação de soma, para gerar
+- 2, 2+2, 2+2+2
+- 2, 4, 6
+- r % 6
+- 2, 4, 0
+- g2(<a>, +)
